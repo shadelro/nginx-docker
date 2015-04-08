@@ -2,9 +2,8 @@
 FROM centos
 
 # Install base dependencies
-#ADD conf/nginx.repo /etc/yum.repos.d/nginx.repo
+ADD conf/nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum update -y
-RUN yum install -y epel-release
 RUN yum install -y nginx
 
 # Configure nginx
